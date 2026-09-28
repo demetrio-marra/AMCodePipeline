@@ -16,22 +16,38 @@ The plugin also includes a summarization pipeline that condenses conversations a
 
 ## Architecture
 
-```text
-Client
-	|
-	v
-AgentMesh Runtime API
-	|
-	v
-AMCodePipeline ChatRequestPipeline
-	|
-	+-- Request analysis and optional memory lookup
-	+-- Knowledge retrieval and reranking
-	+-- Documentation, task-execution, or small-talk branch
-	+-- Final response
+```mermaid
+flowchart TD
+	A[Request Analyzer] --> B{Memory enabled?}
+	B -->|yes and missing values| C[Agent Memory Query Expander]
+	C --> D[Agent Memory Service]
+	B -->|no or no memory query| E[Request Data To Knowledge Query]
+	D --> E
+	E --> F[Knowledge Service Search]
+	F --> G[Knowledge Reranker]
+	G --> H[Request Canonicalization]
+	H --> I{Intent category}
+	I -->|small talk| J[Personal Assistant]
+	I -->|documentation| K[Documentation]
+	K --> J
+	I -->|task execution| L[Functional Analyst]
+	L --> M{Request rejected?}
+	M -->|no| N[Coder knowledge query and retrieval]
+	N --> O[Technical Analyst]
+	O --> P{Request rejected?}
+	P -->|no| Q[Coder]
+	Q --> R[JS Sandbox]
+	R --> S{Review enabled, no error, result exists?}
+	S -->|yes| T[Domain Expert]
+	M -->|yes| J
+	P -->|yes| J
+	S -->|no| J
+	T --> J
 ```
 
 The empty `DefaultPipelinePlugin` marker lets AgentMesh Runtime discover the concrete pipeline, step, agent, parameter, and serializer implementations in this assembly. `Program.cs` is the composition root: it loads configuration, binds `CodePipeline`, then starts AgentMesh Runtime.
+
+For the detailed agent, step, parameter, configuration, and pipeline-flow reference, see [the architecture guide](docs/architecture.md).
 
 ## Prerequisites
 
