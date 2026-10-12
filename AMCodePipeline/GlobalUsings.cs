@@ -20,7 +20,6 @@ global using AgentMesh.Application.Models;
 global using AgentMesh.Application.Services;
 global using AgentMesh.Application.Models.AgentMemory;
 global using AgentMesh.Application.Models.Agents;
-global using AgentMesh.Application.Models.ChatMessages;
 global using AgentMesh.Application.Models.Conversation;
 global using AMCodePipeline.Models.FunctionalAnalyst;
 global using AMCodePipeline.Models.Parameters;

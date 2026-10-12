@@ -1,4 +1,3 @@
-using AgentMesh.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed partial class CoderAgent(IChatClientFactory openAIClientFactory,

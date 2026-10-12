@@ -1,5 +1,3 @@
-using AgentMesh.Contracts.Models.CodeSandbox;
-
 namespace AMCodePipeline.Models.Parameters
 {
     public sealed class CodeExecutionResultTypeParameter : BaseEWParameterConfiguration<SandboxResultType>

@@ -1,10 +1,4 @@
-﻿using AgentMesh.Application.Models.AgentMemory;
-using AMCodePipeline.Models.Parameters;
-using AMCodePipeline.Services.Agents;
-using AgentMesh.Models;
-using AgentMesh.Services;
-
-namespace AMCodePipeline.Services.EWSteps
+﻿namespace AMCodePipeline.Services.EWSteps
 {
     public class AgentMemoryQueryExpanderEWAgenticStep(
         AgentMemoryQueryExpanderAgent agentMemoryQueryExpanderAgent) : IEWAgenticStep

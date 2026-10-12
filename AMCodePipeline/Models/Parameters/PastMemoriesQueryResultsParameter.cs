@@ -1,8 +1,3 @@
-using AgentMesh.Application.Models.AgentMemory;
-using AgentMesh.Models;
-using AgentMesh.Services;
-using Microsoft.Extensions.DependencyInjection;
-
 namespace AMCodePipeline.Models.Parameters
 {
     public sealed class PastMemoriesQueryResultsParameter([FromKeyedServices("DisplayParametersSerializer")] IEWParameterSerializer displayValueSerializer) : BaseEWParameterConfiguration<IEnumerable<AgentMemoryQueryResultItem>>

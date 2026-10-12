@@ -1,5 +1,3 @@
-using AgentMesh.Contracts.Models.Knowledge;
-
 namespace AMCodePipeline.Utils
 {
     public static class EWParameterDisplayUtils

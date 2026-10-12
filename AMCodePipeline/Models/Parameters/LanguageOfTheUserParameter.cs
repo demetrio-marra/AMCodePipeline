@@ -1,5 +1,3 @@
-using AgentMesh.Models;
-
 namespace AMCodePipeline.Models.Parameters
 {
     public sealed class LanguageOfTheUserParameter : BaseEWParameterConfiguration<string>

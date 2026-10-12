@@ -1,5 +1,3 @@
-using AgentMesh.Contracts.Models.Knowledge;
-
 namespace AMCodePipeline.Services.Helpers
 {
     public class DisplayValuesEWParameterSerializer : IEWParameterSerializer

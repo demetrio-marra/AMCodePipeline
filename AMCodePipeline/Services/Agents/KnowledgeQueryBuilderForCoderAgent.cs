@@ -1,4 +1,3 @@
-using AgentMesh.Contracts.Models.Knowledge;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class KnowledgeQueryBuilderForCoderAgent(

@@ -1,10 +1,3 @@
-using AgentMesh.Models;
-using AgentMesh.Contracts.Models.Knowledge;
-using AgentMesh.Services;
-using AgentMesh.Contracts.Utils;
-using Microsoft.Extensions.DependencyInjection;
-using System.Text.Json;
-
 namespace AMCodePipeline.Models.Parameters
 {
     public sealed class KnowledgeQueryResultParameter([FromKeyedServices("DisplayParametersSerializer")] IEWParameterSerializer displayValueSerializer) : BaseEWParameterConfiguration<KnowledgeQueryResult>
