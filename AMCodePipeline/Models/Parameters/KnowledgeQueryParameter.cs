@@ -1,6 +1,6 @@
 namespace AMCodePipeline.Models.Parameters
 {
-    public sealed class KnowledgeQueryParameter([FromKeyedServices("DisplayParametersSerializer")] IEWParameterSerializer displayValueSerializer) : BaseEWParameterConfiguration<AgentMesh.Models.Knowledge.KnowledgeQuery>
+    public sealed class KnowledgeQueryParameter([FromKeyedServices("DisplayParametersSerializer")] IEWParameterSerializer displayValueSerializer) : BaseEWParameterConfiguration<AgentMesh.Contracts.Models.Knowledge.KnowledgeQuery>
     {
         public override string Name => "Knowledge query";
 

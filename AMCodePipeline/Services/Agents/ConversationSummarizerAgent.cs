@@ -1,7 +1,7 @@
-using AgentMesh.Application.Contracts;
+using AgentMesh.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
-    public sealed class ConversationSummarizerAgent(IOpenAIClientFactory openAIClientFactory,
+    public sealed class ConversationSummarizerAgent(IChatClientFactory openAIClientFactory,
                                       Resilience resilience,
                                       ILogger<ConversationSummarizerAgent> logger,
                                       IAgentInputSerializer agentInputSerializer) : AbstractAgent<string>(logger,

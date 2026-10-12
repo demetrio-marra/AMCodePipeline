@@ -1,8 +1,8 @@
-using AgentMesh.Application.Contracts;
+using AgentMesh.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class DomainExpertAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         ILogger<DomainExpertAgent> logger,
         IAgentInputSerializer agentInputSerializer) : AbstractAgent<string>(logger,

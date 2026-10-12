@@ -1,8 +1,8 @@
-using AgentMesh.Application.Contracts;
+using AgentMesh.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class PersonalAssistantAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         ILogger<PersonalAssistantAgent> logger,
         IAgentInputSerializer agentInputSerializer) : AbstractAgent<UserRequestResult>(logger, 

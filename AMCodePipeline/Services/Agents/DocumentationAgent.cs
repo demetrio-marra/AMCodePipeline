@@ -1,10 +1,10 @@
-using AgentMesh.Application.Contracts;
+using AgentMesh.Contracts;
 using AgentMesh.Application.Services.Helpers;
 using AgentMesh.Application.Utils;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class DocumentationAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         ILogger<DocumentationAgent> logger,
         IAgentInputSerializer agentInputSerializer) : AbstractAgent<string>(logger,

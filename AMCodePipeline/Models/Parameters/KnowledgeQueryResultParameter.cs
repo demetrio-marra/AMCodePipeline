@@ -1,7 +1,7 @@
 using AgentMesh.Models;
-using AgentMesh.Models.Knowledge;
+using AgentMesh.Contracts.Models.Knowledge;
 using AgentMesh.Services;
-using AgentMesh.Utils;
+using AgentMesh.Contracts.Utils;
 using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json;
 

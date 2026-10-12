@@ -1,8 +1,8 @@
-using AgentMesh.Application.Contracts;
+using AgentMesh.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class TechnicalAnalystAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         ILogger<TechnicalAnalystAgent> logger,
         IAgentInputSerializer agentInputSerializer) : AbstractAgent<TechnicalAnalysis>(logger,
