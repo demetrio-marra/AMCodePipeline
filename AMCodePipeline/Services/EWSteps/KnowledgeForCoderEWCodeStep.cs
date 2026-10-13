@@ -12,10 +12,10 @@ namespace AMCodePipeline.Services.EWSteps
         public async Task<EWStepExecutionResult> ExecuteAsync(IReadOnlyDictionary<Type, object?> Values, CancellationToken cancellationToken = default)
         {
             var query = knowledgeQueryParameter.ValueAs(Values[typeof(KnowledgeQueryForCoderParameter)])!;
-            var knowledgeQueryResult = await knowledgeService.QueryKnowledgeAsync(new AgentMesh.Models.Knowledge.KnowledgeQuery
+            var knowledgeQueryResult = await knowledgeService.QueryKnowledgeAsync(new AgentMesh.Contracts.Models.Knowledge.KnowledgeQuery
             {
                 QueryText = query.QueryText,
-                QueryRetrievalKind = Enum.Parse<AgentMesh.Models.Knowledge.KnowledgeQueryRetrievalKind>(query.QueryRetrievalKind.ToString()),
+                QueryRetrievalKind = Enum.Parse<AgentMesh.Contracts.Models.Knowledge.KnowledgeQueryRetrievalKind>(query.QueryRetrievalKind.ToString()),
                 PrimaryRelevanceKeywords = query.PrimaryRelevanceKeywords,
                 SecondaryRelevanceKeywords = query.SecondaryRelevanceKeywords,
                 MaxResults = query.MaxResults,

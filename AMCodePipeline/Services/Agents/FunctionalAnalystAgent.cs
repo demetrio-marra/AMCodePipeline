@@ -1,8 +1,7 @@
-using AgentMesh.Application.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class FunctionalAnalystAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         ILogger<FunctionalAnalystAgent> logger,
         IAgentInputSerializer agentInputSerializer) : AbstractAgent<FunctionalAnalysis>(logger, 

@@ -1,8 +1,7 @@
-using AgentMesh.Models.Knowledge;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class KnowledgeQueryBuilderForCoderAgent(
-        AgentMesh.Application.Contracts.IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         ILogger<KnowledgeQueryBuilderForCoderAgent> logger,
         IAgentInputSerializer agentInputSerializer) : AbstractAgent<KnowledgeQuery>(

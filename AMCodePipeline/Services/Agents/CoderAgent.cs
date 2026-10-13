@@ -1,7 +1,6 @@
-using AgentMesh.Application.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
-    public sealed partial class CoderAgent(IOpenAIClientFactory openAIClientFactory,
+    public sealed partial class CoderAgent(IChatClientFactory openAIClientFactory,
                       Resilience resilience,
                       ILogger<CoderAgent> logger,
                       IAgentInputSerializer agentInputSerializer) : AbstractAgent<string>(logger,

@@ -1,8 +1,7 @@
-using AgentMesh.Application.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class RelevantFactsEvaluatorAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         ILogger<RelevantFactsEvaluatorAgent> logger,
         IAgentInputSerializer agentInputSerializer) : AbstractAgent<List<ContextMessage>>(logger, 

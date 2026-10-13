@@ -1,10 +1,7 @@
-using AgentMesh.Application.Contracts;
-using AgentMesh.Application.Services.Helpers;
-using AgentMesh.Application.Utils;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class CanonicalizerAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         IAgentInputSerializer agentInputSerializer,
         ILogger<CanonicalizerAgent> logger) : AbstractAgent<StructuredUserRequest>(logger,

@@ -1,10 +1,7 @@
-using AgentMesh.Application.Contracts;
-using AgentMesh.Application.Services.Helpers;
-using AgentMesh.Application.Utils;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class AgentMemoryQueryExpanderAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         ILogger<AgentMemoryQueryExpanderAgent> logger,
         IAgentInputSerializer agentInputSerializer) : AbstractAgent<IEnumerable<string>>(logger,

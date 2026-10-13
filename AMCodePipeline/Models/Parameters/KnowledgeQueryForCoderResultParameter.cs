@@ -1,5 +1,3 @@
-using AgentMesh.Models.Knowledge;
-
 namespace AMCodePipeline.Models.Parameters
 {
     public sealed class KnowledgeQueryForCoderResultParameter([FromKeyedServices("DisplayParametersSerializer")] IEWParameterSerializer displayValueSerializer) : BaseEWParameterConfiguration<KnowledgeQueryResult>

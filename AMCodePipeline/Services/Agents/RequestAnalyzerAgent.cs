@@ -1,8 +1,7 @@
-using AgentMesh.Application.Contracts;
 namespace AMCodePipeline.Services.Agents
 {
     public sealed class RequestAnalyzerAgent(
-        IOpenAIClientFactory openAIClientFactory,
+        IChatClientFactory openAIClientFactory,
         Resilience resilience,
         IAgentInputSerializer agentInputSerializer,
         ILogger<RequestAnalyzerAgent> logger) : AbstractAgent<StructuredUserRequest>(logger,

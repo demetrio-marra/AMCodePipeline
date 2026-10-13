@@ -1,6 +1,3 @@
-using AgentMesh.Models;
-using AMCodePipeline.Models.RequestAnalysis;
-
 namespace AMCodePipeline.Models.Parameters
 {
     public sealed class IntentCategoryParameter : BaseEWParameterConfiguration<UserIntentCategory?>

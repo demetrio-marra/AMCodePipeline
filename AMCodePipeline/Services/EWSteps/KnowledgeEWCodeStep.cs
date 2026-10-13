@@ -1,5 +1,3 @@
-using AgentMesh.Models.Knowledge;
-
 namespace AMCodePipeline.Services.EWSteps
 {
     public class KnowledgeEWCodeStep(

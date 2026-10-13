@@ -1,5 +1,3 @@
-using AgentMesh.Models;
-
 namespace AMCodePipeline.Models.Parameters
 {
     /// <summary>
